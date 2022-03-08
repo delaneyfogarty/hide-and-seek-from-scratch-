@@ -2,11 +2,11 @@
 body {
     /* feel free to update these css variables for a quick theme */
     
-    --color1: white;
-    --color2: white;
-    --color3: white;
-    --color4: white;
-    --color5: white;
+    --color1: rgb(179, 32, 147);
+    --color2: rgb(231, 37, 183);
+    --color3: rgb(228, 99, 196);
+    --color4: rgb(108, 32, 207);
+    --color5: rgba(168, 49, 211, 0.911);
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
@@ -65,6 +65,24 @@ header {
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+.cups {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.cup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.cup img {
+    width: 250px;
+    margin: 15px;
 }
 
 .gutter-right {
