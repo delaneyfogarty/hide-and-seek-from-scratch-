@@ -36,7 +36,7 @@ Additional considerations:
 7.) ACP.
 8.) Create handleGuess function that increments total guesses when a button is clicked and generates a # between 1-3.
 9.) ACP.
-10.) Update DOM to show correct cup img and reflect accurate wins, losses, and total element updates.
+10.) Update DOM to show correct cup img (create a variable) and reflect accurate wins, losses, and total element updates.
 11.) ACP.
 12.) Set event listeners.
 13.) ACP.

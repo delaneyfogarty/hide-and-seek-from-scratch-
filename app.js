@@ -13,7 +13,27 @@ const totalEl = document.getElementById('total');
 
 console.log(cupButton0, cupButton1, cupButton2, cupContainer0, cupContainer1, cupContainer2, winsEl, lossesEl, totalEl);
 
-let winsEl = 0;
-let totalEl = 0;
+let wins = 0;
+let total = 0;
 
+function handleGuess(chosenCup) {
+  cupContainer0.src = 'assets/regular-cup.png';
+  cupContainer1.src = 'assets/regular-cup.png';
+  cupContainer2.src = 'assets/regular-cup.png';
 
+  total++;
+
+  const numberBetweenOneAndThree = Math.floor(Math.random() * 3);
+
+  if (numberBetweenOneAndThree === chosenCup) {
+    wins++;
+  }
+}
+const correctCupImgEl = document.getELementById(`cup-${numberBetweenOneAndThree}`); {
+
+  correctCupImgEl.src = 'assets/correct-guess.png';
+
+  winsEl.textContent = wins;
+  totalEl.textContent = total;
+  lossesEl.textContent = total - wins;
+}
