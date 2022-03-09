@@ -11,7 +11,7 @@ const winsEl = document.getElementById('wins');
 const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('total');
 
-console.log(cupButton0, cupButton1, cupButton2, cupContainer0, cupContainer1, cupContainer2, winsEl, lossesEl, totalEl);
+
 
 let wins = 0;
 let total = 0;
@@ -30,10 +30,21 @@ function handleGuess(chosenCup) {
   }
 }
 const correctCupImgEl = document.getELementById(`cup-${numberBetweenOneAndThree}`); {
-
   correctCupImgEl.src = 'assets/correct-guess.png';
 
   winsEl.textContent = wins;
   totalEl.textContent = total;
   lossesEl.textContent = total - wins;
 }
+
+cupButton0.addEventListener('click', () => {
+  handleGuess(0);
+});
+
+cupButton1.addEventListener('click', () => {
+  handleGuess(1);
+});
+
+cupButton2.addEventListener('click', () => {
+  handleGuess(2);
+});

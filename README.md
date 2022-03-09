@@ -23,16 +23,16 @@ Additional considerations:
   - What arrays might you need?
   - What needs to live in a persistence layer?
 - Is there some state we need to initialize?
-- Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+- Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
 
 ## My Plan
 
-1.) Make a wireframe with HTML elements I will need - header, footer, divs, buttons, imgs.
-2.) Draw and save 'cup' imgs in assets folder.
+1.) Make a wire frame with HTML elements I will need - header, footer, divs, buttons, images.
+2.) Draw and save 'cup' images in assets folder.
 3.) Make the 'skeleton' of elements in HTML & ACP.
 4.) Establish DOM elements in JS - cup buttons, containers, and total guesses, losses, and wins; use getElementById.
 5.) ACP.
-6.) Set/let state (what is going to change?) - correctGuessses & totalGuesses.
+6.) Set/let state (what is going to change?) - correctGuesses & totalGuesses.
 7.) ACP.
 8.) Create handleGuess function that increments total guesses when a button is clicked and generates a # between 1-3.
 9.) ACP.
