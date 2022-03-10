@@ -13,38 +13,38 @@ const totalEl = document.getElementById('total');
 
 
 
-let wins = 0;
-let total = 0;
+let winsCount = 0;
+let totalCount = 0;
 
 function userGuess(chosenCup) {
     cupContainer0.src = './assets/regular-cup.png';
     cupContainer1.src = './assets/regular-cup.png';
     cupContainer2.src = './assets/regular-cup.png';
 
-    total++;
+    totalCount++;
 
-    const numberBetweenOneAndThree = Math.floor(Math.random() * 3);
+    const numberBetweenZeroAndThree = Math.floor(Math.random() * 3);
 
-    if (chosenCup === numberBetweenOneAndThree) {
-        wins++;
+    if (chosenCup === numberBetweenZeroAndThree) {
+        winsCount++;
     }
 
-    const correctCupImgEl = document.getElementById(`cup-${numberBetweenOneAndThree}`);
+    const correctCupImgEl = document.getElementById(`cup-${numberBetweenZeroAndThree}`);
     correctCupImgEl.src = './assets/correct-guess.png';
 
-    winsEl.textContent = wins;
-    totalEl.textContent = total;
-    lossesEl.textContent = total - wins;
+    winsEl.textContent = winsCount;
+    totalEl.textContent = totalCount;
+    lossesEl.textContent = totalCount - winsCount;
 }
 
 cupButton0.addEventListener('click', () => {
-    userGuess('cup-0');
+    userGuess(0);
 });
 
 cupButton1.addEventListener('click', () => {
-    userGuess('cup-1');
+    userGuess(1);
 });
 
 cupButton2.addEventListener('click', () => {
-    userGuess('cup-2');
+    userGuess(2);
 });
