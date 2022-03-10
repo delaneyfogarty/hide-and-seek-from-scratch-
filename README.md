@@ -27,7 +27,7 @@ Additional considerations:
 
 ## My Plan
 
-1.) Make a wire frame with HTML elements I will need - header, footer, divs, buttons, images.
+1.) Make a wire frame with HTML elements I will need - header, footer, divs, buttons, images - and place in assets folder.
 2.) Draw and save 'cup' images in assets folder.
 3.) Make the 'skeleton' of elements in HTML & ACP.
 4.) Establish DOM elements in JS - cup buttons, containers, and total guesses, losses, and wins; use getElementById.
