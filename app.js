@@ -1,8 +1,69 @@
 // import functions and grab DOM elements
+const cupButton0 = document.getElementById('button-0');
+const cupButton1 = document.getElementById('button-1');
+const cupButton2 = document.getElementById('button-2');
 
-// let state
+const cupContainer0 = document.getElementById('cup0-container');
+const cupContainer1 = document.getElementById('cup1-container');
+const cupContainer2 = document.getElementById('cup2-container');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+const winsEl = document.getElementById('wins');
+const lossesEl = document.getElementById('losses');
+const totalEl = document.getElementById('total');
+
+let winsCount = 0;
+let totalCount = 0;
+
+resetStyles();
+
+function userGuess(chosenCup, correctSpot) {
+    resetStyles();
+
+    totalCount++;
+
+    let correctCupEl = document.getElementById(correctSpot);
+    correctCupEl.src = ('./assets/correct-guess.png');
+
+    if (chosenCup === correctSpot) {
+        winsCount++;
+    }
+    totals();
+}
+
+cupButton0.addEventListener('click', () => {
+    const correctSpot = getRandomItem();
+    userGuess('cup0-container', correctSpot);
+});
+
+cupButton1.addEventListener('click', () => {
+    const correctSpot = getRandomItem();
+    userGuess('cup1-container', correctSpot);
+});
+
+cupButton2.addEventListener('click', () => {
+    const correctSpot = getRandomItem();
+    userGuess('cup2-container', correctSpot);
+});
+
+function resetStyles() {
+    cupContainer0.src = './assets/regular-cup.png';
+    cupContainer1.src = './assets/regular-cup.png';
+    cupContainer2.src = './assets/regular-cup.png';
+}
+
+function getRandomItem() {
+    const chosenItem = [
+        'cup0-container',
+        'cup1-container',
+        'cup2-container'
+    ];
+    const index = Math.floor(Math.random() * chosenItem.length);
+    return chosenItem[index];
+
+}
+
+function totals() {
+    winsEl.textContent = winsCount;
+    totalEl.textContent = totalCount;
+    lossesEl.textContent = totalCount - winsCount;
+}

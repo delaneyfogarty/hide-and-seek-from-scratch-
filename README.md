@@ -1,4 +1,4 @@
-## The Golden Rule: 
+## The Golden Rule
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
 
@@ -8,18 +8,35 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 
 1) **Make a drawing of your app. Simple "wireframes"**
 1) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
-1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
+1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
 1) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
 1) **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?**
 1) **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
 1) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
 
 Additional considerations:
+
 - Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
-- Consider your data model. 
-  - What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need? 
-  - What are the key/value pairs? 
-  - What arrays might you need? 
+- Consider your data model.
+  - What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
+  - What are the key/value pairs?
+  - What arrays might you need?
   - What needs to live in a persistence layer?
 - Is there some state we need to initialize?
-- Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+- Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+
+## My Plan
+
+1.) Make a wire frame with HTML elements I will need - header, footer, divs, buttons, images - and place in assets folder.
+2.) Draw and save 'cup' images in assets folder.
+3.) Make the 'skeleton' of elements in HTML & ACP.
+4.) Establish DOM elements in JS - cup buttons, containers, and total guesses, losses, and wins; use getElementById.
+5.) ACP.
+6.) Set/let state (what is going to change?) - correctGuesses & totalGuesses.
+7.) ACP.
+8.) Create handleGuess function that increments total guesses when a button is clicked and generates a # between 1-3.
+9.) ACP.
+10.) Update DOM to show correct cup img (create a variable) and reflect accurate wins, losses, and total element updates.
+11.) ACP.
+12.) Set event listeners.
+13.) ACP.
