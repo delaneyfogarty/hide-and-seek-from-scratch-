@@ -21,7 +21,7 @@ function userGuess(chosenCup, correctSpot) {
 
     totalCount++;
 
-    let correctCupEl = document.getElementById(correctSpot + '-container');
+    let correctCupEl = document.getElementById(correctSpot);
     correctCupEl.src = ('./assets/correct-guess.png');
 
     if (chosenCup === correctSpot) {
@@ -53,12 +53,13 @@ function resetStyles() {
 
 function getRandomItem() {
     const chosenItem = [
-        'cup0',
-        'cup1',
-        'cup2'
+        'cup0-container',
+        'cup1-container',
+        'cup2-container'
     ];
     const index = Math.floor(Math.random() * chosenItem.length);
     return chosenItem[index];
+
 }
 
 function totals() {
